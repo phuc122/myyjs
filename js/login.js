@@ -9,4 +9,42 @@ signInBtnLink.addEventListener('click', () => {
 });
 
 
+// let wrapper1 = document.querySelector('.wrapper')
+//    signIn = document.querySelector('.sign-in')
+//    signUp = document.querySelector('.sign-up')
+//dang ki
+const sigIn = document.getElementById('signin')
+const sigUp = document.getElementById('sign-up').addEventListener('submit',(e)=>{
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var user = {
+        username: username,
+        email: email,
+        password: password,
+        // img: './image/avt.jpeg'
+    }
+    userData = JSON.stringify(user);
+    localStorage.setItem('user', userData);
+    alert('Đăng kí thành công');
+    document.getElementById('username').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('password').value = '';
+        wrapper.classList.toggle('active');
+})
+//dangnhap
+document.getElementById('signin').addEventListener('submit', (e) => {
+    e.preventDefault();
+    var username = document.getElementById('username2').value;
+    var password = document.getElementById('password2').value;
+    const userData = localStorage.getItem('user');
+    const user = JSON.parse(userData);
 
+    if(user.username == username && user.password == password){
+        alert('Đăng nhập thành công');
+        window.location.href = "dashboard.html";
+    }else{
+        alert('Sai thông tin đăng nhập');
+        return
+    }
+});
