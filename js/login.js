@@ -14,7 +14,7 @@ signInBtnLink.addEventListener('click', () => {
 //    signUp = document.querySelector('.sign-up')
 //dang ki
 const sigIn = document.getElementById('signin')
-const sigUp = document.getElementById('sign-up').addEventListener('submit',(e)=>{
+const sigUp = document.getElementById('sign-up').addEventListener('submit', (e) => {
     var username = document.getElementById('username').value;
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
@@ -30,7 +30,8 @@ const sigUp = document.getElementById('sign-up').addEventListener('submit',(e)=>
     document.getElementById('username').value = '';
     document.getElementById('email').value = '';
     document.getElementById('password').value = '';
-        wrapper.classList.toggle('active');
+    //chuyen len trang dang nhap
+    wrapper.classList.toggle('active');
 })
 //dangnhap
 document.getElementById('signin').addEventListener('submit', (e) => {
@@ -40,10 +41,10 @@ document.getElementById('signin').addEventListener('submit', (e) => {
     const userData = localStorage.getItem('user');
     const user = JSON.parse(userData);
 
-    if(user.username == username && user.password == password){
+    if (user.username == username && user.password == password) {
         alert('Đăng nhập thành công');
         window.location.href = "dashboard.html";
-    }else{
+    } else {
         alert('Sai thông tin đăng nhập');
         return
     }

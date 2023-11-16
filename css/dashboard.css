@@ -92,3 +92,31 @@ body{
     height: 100%;
     border-radius: 50%;
 }
+.form-register{
+    display: none;
+    color: rgb(12, 11, 11);
+    border-radius: 10px;
+    top:70px;
+    position: absolute;   
+    right: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(133, 138, 181, 0.705);
+}
+.form-register li{
+    list-style: none;
+    padding-top: 10px;
+}
+.form-register li:hover{
+    padding-left: 10px;
+    color: red;
+    
+}
+.form-register hr{
+    margin: 0px;
+}
+.form-register h3{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
