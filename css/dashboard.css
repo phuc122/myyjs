@@ -93,6 +93,7 @@ body{
     border-radius: 50%;
 }
 .form-register{
+    text-align: center;
     display: none;
     color: rgb(12, 11, 11);
     border-radius: 10px;
@@ -107,6 +108,9 @@ body{
     list-style: none;
     padding-top: 10px;
 }
+.form-register ul{
+    padding-left: 0px;
+}
 .form-register li:hover{
     padding-left: 10px;
     color: red;
@@ -119,4 +123,22 @@ body{
     text-align: center;
     margin-top: 10px;
     font-size: 20px;
+}
+.menu-cover{
+    margin-top: 10px;
+}
+.dashboarh{
+    display:block;
+}
+.Reservations{
+    display: none;
+}
+.OrderFood{
+    display: none;
+}
+.PayBills{
+    display: none;
+}
+.Infomation{
+    display: none;
 }

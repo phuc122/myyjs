@@ -1,9 +1,9 @@
-//an hien menu
+//show menu
 const menu = document.querySelector('.form-register');
 const btn = document.querySelector('.laguages');
 btn.addEventListener('click',e =>{
     e.preventDefault()
-    if(menu.style.display === 'none')
+    if( menu.style.display === 'none')
     menu.style.display = 'block';
    else {
     menu.style.display = 'none';
