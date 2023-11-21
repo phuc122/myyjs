@@ -1,0 +1,113 @@
+{
+  "tables": [
+    {
+      "id": 1,
+      "custumerName": "bdfbb",
+      "quantity": "vdfxbd",
+      "status": true
+    },
+    {
+      "id": 2,
+      "custumerName": "bfxbc",
+      "quantity": "dvsv",
+      "status": true
+    },
+    {
+      "id": 3,
+      "custumerName": "bdfbd",
+      "quantity": "bdc",
+      "status": true
+    },
+    {
+      "id": 4,
+      "custumerName": "PHUC",
+      "quantity": "22",
+      "status": true
+    },
+    {
+      "id": 5,
+      "custumerName": "phuc123",
+      "quantity": "5",
+      "status": true
+    },
+    {
+      "id": 6,
+      "custumerName": "11",
+      "quantity": "11",
+      "status": true
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    }
+  ],
+  "oder": [
+    {
+      "id": 1,
+      "nameFood": "gà hầm sả",
+      "img": "../img/mon1.png",
+      "gia": "80",
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "nameFood": "gà lộc",
+      "img": "../img/monan2.png",
+      "gia": "90",
+      "quantity": 0
+    },
+    {
+      "id": 3,
+      "nameFood": "heo quay",
+      "img": "../img/mon3.jpg",
+      "gia": "80",
+      "quantity": 0
+    },
+    {
+      "id": 4,
+      "nameFood": "gà nấu cháo",
+      "img": "../img/mon4.jpg",
+      "gia": "70",
+      "quantity": 0
+    },
+    {
+      "img": "../img/mon6.jpg",
+      "nameFood": "Gà ướp rượi",
+      "gia": "32",
+      "quantity": 0,
+      "id": 5
+    },
+    {
+      "img": "../img/mon7.png",
+      "nameFood": "Xúc xích",
+      "gia": "10",
+      "quantity": 0,
+      "id": 6
+    },
+    {
+      "img": "../img/mon8.webp",
+      "nameFood": "thịt heo ",
+      "gia": "40",
+      "quantity": 0,
+      "id": 7
+    },
+    {
+      "img": "../img/monan2.png",
+      "nameFood": "bánh xèo",
+      "gia": "32",
+      "quantity": 0,
+      "id": 8
+    }
+  ]
+}

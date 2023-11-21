@@ -6,17 +6,21 @@
 .header{
     display: flex;
 }
+.left{
+    height: 100vh;
+    background-color: #333333;
+}
 .big{
     color: white;
-    width: 300px;
-    height: 100vh;
+    width: 230px;
+    height: 100%;
     background-color: #333333;
 }
 .small{
     display: none;
     color: white;
-    height: 100vh;
-    width: 100px;
+    height:230px;
+    width: 100%;
     background-color:#333333 ;
 }
 .menu ul li{
@@ -49,19 +53,23 @@ body{
     font-size: 35px;
 }
 .on{ 
+
     position: absolute;
-    top: 10px;
-    left: 80px;
-    color: rgb(203, 1, 1);
+    top: 23px;
+    left: 27px;
+    color: rgb(255, 0, 0);
     display: none;
 }
 .up{
     display: block;
     position: absolute;
     top: 10px;
-    left: 280px;
-    color: rgb(203, 1, 1);
+    left: 210px;
+    color: rgb(0, 255, 42);
     display: block;
+}
+.menu ul {
+    padding-left: 0px;
 }
 .right{
     width: 100%;
@@ -127,18 +135,153 @@ body{
 .menu-cover{
     margin-top: 10px;
 }
-.dashboarh{
-    display:block;
-}
-.Reservations{
+.box {
     display: none;
 }
-.OrderFood{
-    display: none;
+.red {
+    color: red;
 }
-.PayBills{
-    display: none;
+img {
+    width: 100%;
+    height: 100%;
 }
-.Infomation{
-    display: none;
+.booking {
+    box-shadow: #32325d40 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 10px;
+    background-color: white;
+}
+.button-table{
+    margin-top: 10px;
+}
+#them{
+    margin-top: 10px;
+    
+}
+.soluong{ 
+  margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+}
+.id{
+    font-size: 15px;
+    color: red;
+    
+}
+.modal-body input{
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+.imgoder{
+    border-radius: 15px;
+    height: 200px;
+}
+.soluong {
+    margin-bottom: 10px;
+}
+.nameider{
+    display: inline-block;
+    background-color: hsl(0, 0%, 100%);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 90%;
+    opacity: 0.9;
+}
+.row{
+    gap: 5px;
+}
+.col-lg-3 {
+    flex: 0 0 auto;
+    width: 24% !important;
+}
+.table{
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+}
+#optionTab{
+    border: 1px solid rgb(59, 58, 58);
+    border-radius: 5px;
+}
+.btnOder{
+    border: none;
+    background-color: #3a1414;
+    color: white;
+    width: 100px;
+    border-radius: 10px;
+}
+.btnOder:hover{
+    background-color: rgba(255, 0, 0, 0.627);
+}
+.table h1{
+font-weight: 800;
+}
+.addFood{
+    border: none;
+    background-color: #14153a;
+    color: white;
+    width: 100px;
+    border-radius: 10px;
+    height: 40px;
+}
+.addFood:hover{
+    background-color: rgba(13, 0, 255, 0.627);
+}
+.namefood{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+#topfood{
+    display: flex !important;
+}
+.img-table{
+    height: 230px;
+}
+.gia{
+    text-align: center;
+    margin-top: 20px;
+}
+.menu-cover {
+    background-color: rgba(187, 187, 187, 0.412);
+    overflow:auto;
+
+}
+.row {
+    margin-right: calc(var(--bs-gutter-x) * -1.5) !important;
+    margin-left: calc(var(--bs-gutter-x) * 0.5) !important;
+}
+.box{
+    width:100%;
+    height:610px;
+}
+.img-table img {
+    width: 100%;
+    height: 96%;
+    margin-top: 18px;
+}
+.tru{
+    background-color: rgba(36, 36, 36, 0.648);
+    border: none;
+    border-radius: 10px;
+}
+.cong{
+    background-color: rgba(36, 36, 36, 0.221);
+    border-radius: 10px;
+}
+.soluong{
+    color: white;
+    opacity: 0.8;
 }
