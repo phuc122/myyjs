@@ -2,42 +2,45 @@
   "tables": [
     {
       "id": 1,
-      "custumerName": "bdfbb",
-      "quantity": "vdfxbd",
+      "custumerName": "phuc123",
+      "quantity": "000",
       "status": true
     },
     {
       "id": 2,
-      "custumerName": "bfxbc",
-      "quantity": "dvsv",
-      "status": true
+      "custumerName": "",
+      "quantity": "",
+      "status": false
     },
     {
       "id": 3,
-      "custumerName": "bdfbd",
-      "quantity": "bdc",
-      "status": true
+      "custumerName": "",
+      "quantity": "",
+      "status": false
     },
     {
       "id": 4,
-      "custumerName": "PHUC",
-      "quantity": "22",
-      "status": true
+      "custumerName": "",
+      "quantity": "",
+      "status": false
     },
     {
       "id": 5,
-      "custumerName": "phuc123",
-      "quantity": "5",
-      "status": true
+      "custumerName": "",
+      "quantity": "",
+      "status": false
     },
     {
       "id": 6,
-      "custumerName": "11",
-      "quantity": "11",
-      "status": true
+      "custumerName": "",
+      "quantity": "",
+      "status": false
     },
     {
-      "id": 7
+      "id": 7,
+      "custumerName": "",
+      "quantity": "",
+      "status": false
     },
     {
       "id": 8
@@ -50,9 +53,12 @@
     },
     {
       "id": 11
+    },
+    {
+      "id": 12
     }
   ],
-  "oder": [
+  "listFoods": [
     {
       "id": 1,
       "nameFood": "gà hầm sả",
@@ -108,6 +114,49 @@
       "gia": "32",
       "quantity": 0,
       "id": 8
+    },
+    {
+      "img": "../img/mon3.jpg",
+      "nameFood": "phuc111",
+      "gia": "5656",
+      "quantity": 0,
+      "id": 9
+    },
+    {
+      "img": "../img/mon3.jpg",
+      "nameFood": "ttt",
+      "gia": "44",
+      "quantity": 0,
+      "id": 10
+    }
+  ],
+  "orders": [
+    {
+      "idtable": "1",
+      "items": [
+        {
+          "oderQuatity": 1,
+          "idFood": "1",
+          "nameFood": "GÀ HẦM SẢ",
+          "imgFood": "../img/mon1.png",
+          "giaFood": "80.000.vnd"
+        },
+        {
+          "oderQuatity": 1,
+          "idFood": "2",
+          "nameFood": "GÀ LỘC",
+          "imgFood": "../img/monan2.png",
+          "giaFood": "90.000.vnd"
+        },
+        {
+          "oderQuatity": 1,
+          "idFood": "3",
+          "nameFood": "HEO QUAY",
+          "imgFood": "../img/mon3.jpg",
+          "giaFood": "80.000.vnd"
+        }
+      ],
+      "id": 1
     }
   ]
 }

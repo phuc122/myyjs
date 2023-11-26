@@ -1,43 +1,47 @@
 const api = 'http://localhost:3000/tables';
 let booking2 = '';
+let arrcard ='';
 fetch(api)
   .then(res => res.json())
   .then(data => {
+    const paybil2 = document.getElementById('paybill')  
+    
     const booking = document.getElementById('booking');
     const optionTab = document.getElementById('optionTab');
     tabletrue = data.filter((e,index) =>{
       return e.status == true;
     })
-    
     tabletrue.forEach(table => {
       const listItemTable = document.createElement('option');
       listItemTable.value = table.id;
       listItemTable.textContent = ` Table ${table.id}`;
       optionTab.appendChild(listItemTable);
   })
+   // paybill
   const optionTab2 = document.getElementById('optionTab2');
   tabletrue = data.filter((e,index) =>{
     return e.status == true;
   })
-  
+
   tabletrue.forEach(table => {
     const listItemTable = document.createElement('option');
+    listItemTable.className = 'btnpay';
     listItemTable.value = table.id;
     listItemTable.textContent = ` Table ${table.id}`;
     optionTab2.appendChild(listItemTable);
 })
     data.forEach(e => {
-        
+   
       const img = e.status ? "../img/datBanss.png" : "../img/datBan-default.png";
       const btnAdd = e.status ?  `<button type="button" class="btn btn-primary" id="showModalBtn" data-bs-target="#myModal" onclick=clickAdd2(${e.id})>Add</button>
-    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal3">Card</button>`
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal3" onclick=clickCart(${e.id})>Card</button>`
     : `<button type="button" onclick=clickBooking(${e.id}) class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Booking
   </button>`
       booking2 += `
      <div class="col-6 col-md-4 col-lg-3 mt-3">
      <div class="booking">
-         <h1 class="id">${e.id}</h1>
+         <h1 class="id"> Bàn Số ${e.id}</h1>
          <div class="img-table">
            <img src=${img} alt="">
          </div>
@@ -47,7 +51,9 @@ fetch(api)
      </div>
  </div>
      `
-    });
+    }   
+   
+    );
     booking.innerHTML = booking2;
   })
 
@@ -78,9 +84,8 @@ var idBooking = null;
 
 
 function clickBooking(tableId) {
+  console.log('tableId: ', tableId);
   idBooking = tableId;
-   console.log('tableId: ', idBooking);
-   
 }
 
 function updateTable() {

@@ -1,5 +1,5 @@
 function clickAdd2(tableid){
-    
+
     const menu = document.querySelectorAll('.box')
     //none menu tabl
     menu[1].style.display='none';
@@ -12,3 +12,4 @@ function clickAdd2(tableid){
     const idoder = document.querySelector('#optionTab')
     idoder.value = tableid
 }
+   

@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-<div class="header">
+  <!-- //menu table -->
+<div class="header">      
+      <div class="menusmall"><i class="fa-solid fa-bars"></i></div> 
     <div class="left">
+  <!-- menu latop -->
         <!-- menu to -->
         <div class="big"> 
             <div class="container">
@@ -89,22 +93,23 @@
      <!-- menu chinh -->
     <div class="container-fluid menu-cover">
         <div id="dashboarh" class="box">
-            Dashboard
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
         </div>
         <div id="Reservations" class="box">
             <button id="them" onclick="createPost()"  class="btn btn-primary btn btn-dark">Thêm bàn</button>
             <div class="row" id="booking">
                
             </div>
-          
- </div>
+        </div>
         <div id="OrderFood" class="box">
-            <div class="table">
+            <div class="table3">
                 <h5>Choose a table:</h5>
                 <select name="" id="optionTab"> 
 
                 </select>
-                <button class="btnOder">Order</button>
+                <button class="btnOder" onclick=addOder()>Order</button>
             </div>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">add food</button>
             <div class="row oder">
@@ -112,17 +117,103 @@
             </div>
         </div>
         <div id="PayBills" class="box">
-            <div class="table">
+            <div class="table3">
                 <h5>Choose a table:</h5>
                 <select name="" id="optionTab2"> 
                                      
                 </select>
-                <button class="paybill">Paybill</button>
+                <button class="paybill22 btn-success">Paybill</button>
+            </div>
+            <div class="row" id="pay_bill">
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th scope="col">STT</th>
+                          <th scope="col">Foods</th>
+                          <th scope="col">Food Name</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">tổng giá</th>
+                      </tr>
+                  </thead>
+                 
+                  <tbody class="td--list--food--oder" id="orderInfo">
+                   
+                  </tbody>
+                   
+              </table>
+              <div id="paybil2">
+                    
+              </div>
+          </div>
+        </div>
+        <!-- impomate -->
+        <div id="Infomation" class="box ">
+          <div class="impatan">
+          <div class="w3-card-4 w3-dark-grey" style="width:20%;height: 300px;" >
+            <div class="w3-container w3-center w-100">
+              <h3>Shop</h3>
+              <img src="../img/img_avatar3.png" alt="Avatar" style="width:80%">
+              <h5>Nguyễn Văn Phúc</h5>
+              <div class="w3-section">
+                <button class="w3-button w3-green">Thêm ảnh</button>
+                <button class="w3-button w3-red">Xóa ảnh</button>
+              </div>
+            </div>
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Đà Nẵng</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>Phucnv202@gmai.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>0374454002</p>
+              </div>
+             
             </div>
         </div>
-        <div id="Infomation" class="box">Infomation</div>
+        <section id="contact" class="contact">
+          <div class="container contact">
+        
+            <div class="col-lg-200 mt-10 mt-lg-0 d-flex align-items-stretch">
+              <form action="https://formspree.io/f/xgejjowb"
+              method="POST" class="php-email-form">
+                <div class="row">
+                  <div class="form-group col-md-6 formcontact">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Email</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name">Message</label>
+                  <textarea class="form-control" name="message" rows="10" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.1531900691193!2d108.20999357468294!3d16.0055390411407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421a3d754e4957%3A0xc8c39ea720d77676!2zNTAgVsSDbiBUaeG6v24gRMWpbmcsIEhvw6AgWHXDom4sIEPhuqltIEzhu4csIMSQw6AgTuG6tW5nIDU1MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sus!4v1700809394324!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-</div>
+  </div>
 </div>
 <div class="on-up">
     <div class="on"><i class="fa-solid fa-circle-arrow-right"></i></div>
@@ -151,7 +242,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" >
-         <input type="text" placeholder="Số lượng khách" id="quatiz">
+         <input type="number" placeholder="Số lượng khách" id="quatiz">
          <input type="text" placeholder="Tên " id="name">
         </div>
         <div class="modal-footer">
@@ -183,19 +274,30 @@
     </div>
   </div>
   <!-- card --> 
-   <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
+   <div class="modal fade " id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content setwidth">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Add</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body" >
-        <input type="text">
+       <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Tên </th>
+      <th scope="col">ảnh </th>
+      <th scope="col">số lượng </th>
+      <th scope="col">tổng giá</th>
+    </tr>
+  </thead>
+  <tbody id="odertable">
+
+  </tbody> 
+    <div id="odertable2" ></div>
+</table>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="clickAdd(``)">paybil</button>
+        <div class="modal-footer" id="card">
         </div>
       </div>
     </div>
@@ -209,6 +311,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="../js/addtab.js"></script>
 <script src="../js/pallbill.js"></script>
+<script src="../js/dashboard.js"></script>
+
 <script
 
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -220,5 +324,7 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+<script src="../js/reponsive.js"></script>
+    <script>!function(s,u,b,i,z){var o,t,r,y;s[i]||(s._sbzaccid=z,s[i]=function(){s[i].q.push(arguments)},s[i].q=[],s[i]("setAccount",z),r=["widget.subiz.net","storage.googleapis"+(t=".com"),"app.sbz.workers.dev",i+"a"+(o=function(k,t){var n=t<=6?5:o(k,t-1)+o(k,t-3);return k!==t?n:n.toString(32)})(20,20)+t,i+"b"+o(30,30)+t,i+"c"+o(40,40)+t],(y=function(k){var t,n;s._subiz_init_2094850928430||r[k]&&(t=u.createElement(b),n=u.getElementsByTagName(b)[0],t.async=1,t.src="https://"+r[k]+"/sbz/app.js?accid="+z,n.parentNode.insertBefore(t,n),setTimeout(y,2e3,k+1))})(0))}(window,document,"script","subiz", "acruytwndjajnbkyvxtl")</script>
 </body>
 </html>
