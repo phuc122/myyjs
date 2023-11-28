@@ -65,7 +65,61 @@ btnpaybill.onclick = () => {
         console.error("Error fetching orders:", error);
       });
       alert('bạn đã thanh toán thành công')
+
   }
 
 }
+
+function selectbyid() {
+  const select = document.getElementById('optionTab2').value;
+  
+  fetch('http://localhost:3000/orders')
+.then(res => res.json())
+.then(data =>{
+    const odertable = document.getElementById('odertable');
+    const odertable2 = document.getElementById('odertable2');
+    const tong = document.getElementById('paybil2');
+    const orderById = data.filter(order => order.idtable == select);
+
+    let ListOder2 = "";
+    let sums = 0;
+    let tOder3 ="";
+    let paybillArr ='';
+    let stt = 0;
+    const orderInfo = document.getElementById('orderInfo');
+    orderById.forEach((e)=>{
+       e.items.forEach((element,index) => {
+        const totalPrice = parseInt(element.oderQuatity) * parseInt(element.giaFood);
+        sums +=totalPrice
+        ListOder2 +=`
+        <tr>
+      <td>${element.nameFood}</td>
+      <td class="imgModal"><img src=${element.imgFood} alt=""></td>
+      <td>${element.oderQuatity}</td>
+      <td>${totalPrice}.000.vnd</td>
+    </tr>`;
+
+
+  paybillArr += `<tr><th scope="row">${stt+1}</th>
+  <td class="td__food__image"><img class="imgpaybill" src="${element.imgFood}" alt=""></td>
+  <td>${element.nameFood}</td>
+  <td>${element.giaFood}</td>
+  <td>${element.oderQuatity}</td>
+  <td>${totalPrice}.000.vnd</td></tr> `;
+      stt++;
+      
+       })
+
+    
+    }) 
+     tOder3 +=`
+     <h3>Tổng tiền:</h3>
+     <div class="gia">${sums}.000.vnd</div> ` 
+        odertable2.innerHTML = tOder3;   
+            odertable.innerHTML = ListOder2;
+            orderInfo.innerHTML = paybillArr;
+            tong.innerHTML = tOder3;
+}) 
+}
+
 

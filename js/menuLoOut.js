@@ -24,3 +24,49 @@ const logUp = document.querySelector('.logup').addEventListener('click',e=>{
         window.location.href = 'login.html'
     }
 })
+// fetch('http://localhost:3000/imgLogin')
+// .then(res=>res.json())
+// .then(data=>{
+//     const imglogin = document.getElementById('imglogin');
+//     console.log('imglogin: ', imglogin);
+
+//     data.forEach(element => {
+//     arr +=`
+//     <img src="${element.img}" alt="Avatar" style="width:80%" id="">
+//     `
+// });
+// imglogin.innerHTML = arr;
+// }
+
+// )
+function getUser() {
+   const userData = localStorage.getItem("user");
+   const userview = JSON.parse(userData);
+   const avatar = document.querySelectorAll(".avatar"); 
+     avatar.forEach((e)=>{
+        e.src = userview.img;
+     })
+    
+ 
+
+}
+getUser();
+// hàm sử lý form thông tin
+document.addEventListener('DOMContentLoaded', function() {
+    const updateForm = document.getElementById('updateForm');
+    const imagePreview = document.querySelectorAll('.avatar');
+    const profileImageInput = document.getElementById('profileImage2');
+  
+    profileImageInput.addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        var  imageURL = URL.createObjectURL(file);
+         imagePreview.forEach((element) => {
+          element.src = imageURL;
+         });
+
+      } else {
+        imagePreview.style.display = 'none';
+      }
+    });
+})

@@ -86,13 +86,17 @@
      <i class="fa-regular fa-envelope"></i></div>
      <div class="laguages">
          <div class="laguages__image">
-             <img src="https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-6/394742223_1725789787902360_1482002081815725119_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=M9Ymii59KdEAX9fpLC9&_nc_ht=scontent.fsgn2-10.fna&oh=00_AfCc0VCXYEdxPBzqlt4BjhV3AhOmroGucsADiltQKFHzsg&oe=655BBF35" alt="">
+             <img src="" alt="" class="avatar">
          </div>
     </div>
      </div>
      <!-- menu chinh -->
     <div class="container-fluid menu-cover">
         <div id="dashboarh" class="box">
+          <h1>Biểu đồ thể hiện số lượng khách mỗi bàn</h1>
+            <div id="charts-container" ></div>
+            <h1>Biểu đồ thể hiện tổng tiền mỗi bàn</h1>
+            <div id="charts-pie" ></div>
           <div>
             <canvas id="myChart"></canvas>
           </div>
@@ -119,8 +123,8 @@
         <div id="PayBills" class="box">
             <div class="table3">
                 <h5>Choose a table:</h5>
-                <select name="" id="optionTab2"> 
-                                     
+                <select id="optionTab2" onchange=selectbyid()> 
+                  <option value="" selected disabled>Choose Table</option>
                 </select>
                 <button class="paybill22 btn-success">Paybill</button>
             </div>
@@ -153,10 +157,12 @@
           <div class="w3-card-4 w3-dark-grey" style="width:20%;height: 300px;" >
             <div class="w3-container w3-center w-100">
               <h3>Shop</h3>
-              <img src="../img/img_avatar3.png" alt="Avatar" style="width:80%">
+              <div class="imglogin" id="imglogin">
+              <img src="" alt="Avatar" style="width:80%" class="avatar">
+            </div>
               <h5>Nguyễn Văn Phúc</h5>
               <div class="w3-section">
-                <button class="w3-button w3-green">Thêm ảnh</button>
+                <input type="file" id="profileImage2" style="width: 100px;">
                 <button class="w3-button w3-red">Xóa ảnh</button>
               </div>
             </div>
@@ -302,6 +308,8 @@
       </div>
     </div>
   </div>
+  <!-- Add this script tag to your HTML file -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../js/selectMenu.js"></script>
 <script src="../js/incon-onup.js"></script>
 <script src="../js/menuLoOut.js"></script>
@@ -312,6 +320,7 @@
 <script src="../js/addtab.js"></script>
 <script src="../js/pallbill.js"></script>
 <script src="../js/dashboard.js"></script>
+
 
 <script
 

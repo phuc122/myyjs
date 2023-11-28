@@ -22,7 +22,7 @@ const sigUp = document.getElementById('sign-up').addEventListener('submit', (e) 
         username: username,
         email: email,
         password: password,
-        // img: './image/avt.jpeg'
+        img: '../img/img_avatar3.png'
     }
     userData = JSON.stringify(user);
     localStorage.setItem('user', userData);

@@ -30,11 +30,14 @@ small2.forEach((element,index) => {
 })
 
 big2.forEach((element,index) => {
+   boxs[1].style.display = "block";
    element.addEventListener('click', () => {
         boxs.forEach((box,i) => {
           box.style.display = "none";
+   
         })
         boxs[index].style.display = "block";
+      
       
         small2.forEach((element,i) => {
          if(i == index) {

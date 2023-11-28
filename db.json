@@ -1,10 +1,16 @@
 {
+  "imgLogin": [
+    {
+      "id": 1,
+      "img": "../img/mon6.jpg"
+    }
+  ],
   "tables": [
     {
       "id": 1,
-      "custumerName": "phuc123",
-      "quantity": "000",
-      "status": true
+      "custumerName": "",
+      "quantity": "",
+      "status": false
     },
     {
       "id": 2,
@@ -15,8 +21,8 @@
     {
       "id": 3,
       "custumerName": "",
-      "quantity": "",
-      "status": false
+      "quantity": "5",
+      "status": true
     },
     {
       "id": 4,
@@ -132,7 +138,7 @@
   ],
   "orders": [
     {
-      "idtable": "1",
+      "idtable": "2",
       "items": [
         {
           "oderQuatity": 1,
@@ -156,7 +162,41 @@
           "giaFood": "80.000.vnd"
         }
       ],
-      "id": 1
+      "id": 2
+    },
+    {
+      "idtable": "3",
+      "items": [
+        {
+          "oderQuatity": 1,
+          "idFood": "5",
+          "nameFood": "GÀ ƯỚP RƯỢI",
+          "imgFood": "../img/mon6.jpg",
+          "giaFood": "32.000.vnd"
+        },
+        {
+          "oderQuatity": 1,
+          "idFood": "6",
+          "nameFood": "XÚC XÍCH",
+          "imgFood": "../img/mon7.png",
+          "giaFood": "10.000.vnd"
+        },
+        {
+          "oderQuatity": 1,
+          "idFood": "7",
+          "nameFood": "THỊT HEO",
+          "imgFood": "../img/mon8.webp",
+          "giaFood": "40.000.vnd"
+        },
+        {
+          "oderQuatity": 1,
+          "idFood": "8",
+          "nameFood": "BÁNH XÈO",
+          "imgFood": "../img/monan2.png",
+          "giaFood": "32.000.vnd"
+        }
+      ],
+      "id": 4
     }
   ]
 }
